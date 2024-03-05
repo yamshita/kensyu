@@ -1,56 +1,21 @@
 #include <stdio.h>
-
 int main(void)
 {
-    int num, i;
+    int a;
     
     printf("数字を入力してください：");
-    scanf("%d", &num);
-    
-    // 判定１の処理
-    if(num == 0)
-    {
-        printf("入力された数字は0です。\n");
-    }
-    else
-    {
-        if (num > 0 ) 
-        {
-            printf("入力した数字%dは正の整数です。\n", num);
-        }
-        else
-        {
-            printf("入力した数字%dは負の整数です。\n", num);
-        }
-    }
+    scanf("%d", &a);
 
-    // 判定２の処理 
-    if(num != 0)
-    {
-        if ((num % 2) == 0)
-        {
-            printf("入力した数字%dは偶数です。\n", num);
-        }
-        else
-        {
-            printf("入力した数字%dは奇数です。\n", num);
-        }
-    }
-    else
-    {
-        printf("-------------\n");
-    }
+    double r = a;
+    double pi = 3.14;
+    double area = pi * r * r;
 
-    // 判定３の処理
-    for(i = 2; i < num; i++) 
-    {
-        if(num % i == 0) 
-        {
-            printf("%d は素数ではありません。\n", num);
-            return 0;
-        }
-    }
+    printf("円の面積は %fです。\n", area);
 
-    printf("%d は素数です。\n", num);
+    double s = 2 * a;
+    double circle = 2 * a * pi;
+
+    printf("円周の長さは %fです。\n", circle);
+
     return 0;
 }
